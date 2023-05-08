@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issues</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="projectTitle"></h1>
+    </header>
+    <center>
+      <div id="submitNewIssue">
+        <br>
+        <h3>Submit a new issue:</h3>
+        <form id="newIssue" method="post" action="/api/">
+          <input type="text" name="issue_title" placeholder="*Title" required><br>
+          <textarea type="text" name="issue_text" placeholder="*Description" required></textarea><br>
+          <input type="text" name="created_by" placeholder="*Author " required><br>
+          <input type="text" name="assigned_to" placeholder="(opt)Assigned to"><br>
+          <input type="text" name="status_text" placeholder="(opt)Status text"><br>
+          <button type="submit">Submit Issue</button>
+        </form>
+      </div>
+      
+      <div id="issueDisplay"></div>
+      
+      <hr>
+    </center>
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+      
+    <script src="/public/client.js"></script>
+      
+  </body>
+</html>
